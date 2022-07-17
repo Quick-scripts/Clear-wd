@@ -10,10 +10,4 @@ Execute `clearwd` in the shell and it will remove all files, directories, and su
 `clearwd foo bar` would clear directories `foo` and `bar`
 
 ## Installation
-First enter the repository with `cd Clear-wd`
-
-In order to build the script from the provided `main.sh`, you must run `build.sh`. `build.sh` requires the `shc` compiler which is available.
-
-Otherwise, you may simply build the C code with any C compiler using `./cbuild.sh <compiler name>` where `<compiler name>` is the name of the compiler.
-
-To add `clearwd` to path, you may move `clearwd` to local binaries with `mv ./clearwd $HOME/.local/bin`
+`clearwd` can be moved to path in `/usr/local/bin/` with `mv clearwd /use/local/bin` 
