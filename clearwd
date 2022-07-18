@@ -22,7 +22,8 @@ def main():
 
     for target in targets:
         if is_root(target):
-            print(root)
+            print(root_err)
+            return
 
     for target in targets:
         try:
