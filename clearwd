@@ -4,14 +4,25 @@ from __future__ import annotations
 import os
 import sys
 
+root_err: str = "\x1b[38;5;1merror\x1b[38;5;15m: one of your selected targets is the root directory. Removing this will cause \x1b[38;5;1mCATASTROPHIC DAMAGE\x1b[38;5;15m to your system.(clearwd cancelled)"
+
+def is_root(path: str) -> bool:
+    current_directory: str = os.getcwd()
+    os.chdir(path)
+    directory_is_root: bool = os.getcwd() == '/'
+    os.chdir(current_directory)
+    return directory_is_root
+
 def main():
     argv: list[str] = sys.argv
-
-    if len(argv) == 1:
-        os.system("rm -rf ./*")
-        return
-    
     targets: list[str] = argv[1:]
+   
+    if len(argv) == 1:
+        targets = ["./"]
+
+    for target in targets:
+        if is_root(target):
+            print(root)
 
     for target in targets:
         try:
