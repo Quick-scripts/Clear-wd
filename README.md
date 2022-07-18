@@ -10,4 +10,6 @@ Execute `clearwd` in the shell and it will remove all files, directories, and su
 `clearwd foo bar` would clear directories `foo` and `bar`
 
 ## Installation
-`clearwd` can be moved to path in `/usr/local/bin/` with `mv clearwd /use/local/bin` 
+First, python must be installed
+
+Then, `clearwd` can be moved to path in `/usr/local/bin/` with `mv clearwd /use/local/bin` 
