@@ -15,7 +15,7 @@ def main():
 
     for target in targets:
         try:
-            os.system("rm -rf {}".format(target))
+            os.system("rm -rf {}/*".format(target))
         except Exception as e:
             sys.stderr.write("{} was not found".format(target))
         
